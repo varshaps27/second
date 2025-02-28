@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: plum;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .signup-container {
+            background:hotpink;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .signup-container h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            text-align: left;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit" id="signupBtn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="index2.html">Login</a></p>
+    </div>
+<script>
+    document.getElementById("signup-form").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        let username = document.getElementById("username").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value.trim();
+        let confirmPassword = document.getElementById("confirm-password").value.trim();
+        if (username === "" || email === "" || password === "" || confirmPassword === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
+        if (password !== confirmPassword) {
+            alert("Passwords do not match. Please try again.");
+            return;
+        }
+        localStorage.setItem("user", JSON.stringify({ username, email }));
+        localStorage.setItem("isLoggedIn", "true");
+        alert("Sign-Up Successful! Redirecting to Home Page...");
+        window.location.href = "index.html";
+});
+</script>
+    
+</body>
+</html>

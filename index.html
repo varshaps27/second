@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>ZENTASK</h1>
+        <ul id="navlinks">
+            <li><a href="#todo">TO-DO</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="index2.html">LOGIN</a></li>
+            <li><a href="signup.html">SIGN UP</a></li>  
+        </ul>
+    </div>
+    <div class="background">
+        <div class="todobox" id="todo">
+            <h1>To-Do List</h1>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="listcontainer">
+                <!-- <li class="listcontainer">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div> 
+    <div class="content" id="about">
+        <h2>ABOUT</h2>
+        <h3>ZenTask – Simplify Your Life, One Task at a Time!</h3>
+        <h4><strong>The Ultimate Productivity Tool</strong></h4>
+        <p>
+            ZenTask is a minimalist and intuitive to-do list application designed to help users efficiently manage their daily tasks. In a fast-paced world where responsibilities at work, school, and home can become overwhelming, staying organized is essential. Unlike complex productivity tools that come with unnecessary features, ZenTask focuses on simplicity, making it easy for users to prioritize tasks, set reminders, and track progress without distractions. Its user-friendly interface ensures that anyone can quickly add, edit, and remove tasks with just a few clicks. The ability to mark tasks as completed provides a clear visual indication of progress, helping users stay motivated and ensuring they do not miss important deadlines.<br>
+            One of the key strengths of ZenTask is its distraction-free design. With a clean and aesthetically pleasing interface, users can focus solely on their tasks without getting overwhelmed by cluttered menus or complicated settings. The app is also designed to be accessible across multiple devices, ensuring that users can manage their tasks anytime, anywhere. If integrated with cloud storage, ZenTask can synchronize data, allowing users to retrieve their task lists from different devices seamlessly. Additionally, smart reminders and notifications can alert users about upcoming deadlines, preventing them from forgetting important commitments. A dark mode feature further enhances usability by reducing eye strain, making the app comfortable to use in low-light conditions.<br>
+            To improve task organization, ZenTask offers categorization and tagging options, allowing users <br>to group their tasks into different categories such as work, personal, or urgent. This feature enhances workflow management and ensures that tasks are prioritized effectively. While ZenTask already provides a simple and effective way to manage tasks, future enhancements can further improve its functionality. Features such as drag-and-drop task rearrangement, calendar integration for task scheduling, collaboration tools for shared task lists, and the ability to attach files or notes to tasks can significantly enhance the user experience.<br>
+            What makes ZenTask stand out among other task management apps is its focus on simplicity and efficiency. Many productivity apps include overwhelming features that are rarely used, making them complicated and time-consuming to navigate. ZenTask, on the other hand, is designed for individuals who want a quick and effective way to organize tasks without unnecessary complexity. Its intuitive design ensures that users spend less time managing their to-do lists and more time completing their tasks. Whether used by students, professionals, or individuals managing personal responsibilities, ZenTask provides an easy and effective way to stay organized and productive.<br>
+            As the app continues to evolve, its potential for further improvements makes it a valuable tool for anyone looking to optimize their workflow. With its clean design, essential features, and future possibilities, ZenTask is more than just a simple to-do list—it is a productivity booster that helps users take control of their time and achieve their goals with ease.
+        </p>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
